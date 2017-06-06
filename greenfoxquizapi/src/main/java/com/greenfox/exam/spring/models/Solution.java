@@ -19,6 +19,10 @@ public class Solution {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
   private String question;
-  private Object answer;
+  private String answer;
 
+  public Solution(String question, String answer) {
+    this.question = question;
+    this.answer = answer;
+  }
 }
