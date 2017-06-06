@@ -10,7 +10,6 @@ import lombok.Setter;
 /**
  * Created by Bálint on 2017. 06. 06..
  */
-@Entity
 @Getter
 @Setter
 public class Answer {
