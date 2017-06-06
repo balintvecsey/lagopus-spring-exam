@@ -19,5 +19,4 @@ public class QuizApiController {
   public ListOfQuestions provideQuestions() {
     return quizService.showQuestions();
   }
-
 }
