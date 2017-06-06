@@ -12,8 +12,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class JSONAnswers {
 
-  long id = 1L;
-  Iterable<Answer> answers;
+  private long id = 1L;
+  private Iterable<Answer> answers;
 
   public JSONAnswers(Iterable<Answer> answers) {
     this.answers = answers;
