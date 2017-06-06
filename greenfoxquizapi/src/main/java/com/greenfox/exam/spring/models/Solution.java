@@ -13,11 +13,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Answer {
+public class Solution {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
+  private String question;
   private Object answer;
 
 }
