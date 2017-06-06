@@ -1,9 +1,13 @@
 package com.greenfox.exam.spring.controllers;
 
-import com.greenfox.exam.spring.models.ListOfQuestions;
+import com.greenfox.exam.spring.models.JSONAnswers;
+import com.greenfox.exam.spring.models.JSONQuestions;
+import com.greenfox.exam.spring.models.ResponseMessage;
 import com.greenfox.exam.spring.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,7 +20,12 @@ public class QuizApiController {
   QuizService quizService;
 
   @GetMapping("/questions")
-  public ListOfQuestions provideQuestions() {
+  public JSONQuestions provideQuestions() {
     return quizService.showQuestions();
+  }
+
+  @PostMapping("/answers")
+  public ResponseMessage provideAnswers(@RequestBody JSONAnswers jsonAnswers) {
+    return quizService.sendAnswers(jsonAnswers);
   }
 }

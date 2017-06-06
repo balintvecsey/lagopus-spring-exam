@@ -10,12 +10,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ListOfQuestions {
+public class JSONAnswers {
 
   long id = 1L;
-  Iterable<Question> questions;
+  Iterable<Answer> answers;
 
-  public ListOfQuestions(Iterable<Question> questions) {
-    this.questions = questions;
+  public JSONAnswers(Iterable<Answer> answers) {
+    this.answers = answers;
   }
 }
